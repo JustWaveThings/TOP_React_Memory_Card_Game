@@ -1,22 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './meyer.css';
 import './index.css';
 import Card from './components/Card';
 import cardData from './cardData';
 
 function App() {
-	const [clicked, setClicked] = useState(false);
+	const [cards, setCards] = useState(cardData);
+	const [gameOver, setGameOver] = useState(false);
+	console.log(cards);
 
-	function handleCardClick() {
-		return setClicked(cli);
+	function handleCardClick(cardId) {
+		setCards(prevState => prevState.map(card => (card.id === cardId ? { ...card, clicked: !card.clicked } : card)));
 	}
 
-	const cardDisplay = cardData.map((item, index) => {
+	const cardDisplay = cardData.map(item => {
 		return (
 			<Card
-				key={index}
+				key={item.id}
 				item={item}
-				chosen={handleCardClick}
+				chosen={() => handleCardClick(item.id)}
 			/>
 		);
 	});
@@ -33,19 +35,35 @@ function App() {
 				</div>
 				<div className="score">
 					<div>score:</div>
-					<div className="current_score"> current score: 3</div>
-					<div className="high_score"> high score: 5</div>
+					<div className="current_score"> current: 3</div>
+					<div className="high_score"> high: 5</div>
 				</div>
 			</header>
-			<main className="main">{cardDisplay}</main>
-			<div className="game_over">
-				<div className="game_over_title">Game Over </div>
-				<div className="game_over_text">Your score was: 3 </div>
-				<button className="new_game_button">Try again?</button>
-			</div>
+			{!gameOver && <main className="main">{cardDisplay}</main>}
+			{gameOver && (
+				<div className="game_over">
+					<div className="game_over_title">Game Over </div>
+					<div className="game_over_text">Your score was: 3 </div>
+					<button className="new_game_button">Try Again?</button>
+				</div>
+			)}
 			<footer className="footer"> © JustWaveThings</footer>
 		</div>
 	);
 }
 
 export default App;
+
+/* 	useEffect(() => {
+		const cardIds = cardData.map(item => item.id);
+		setCardId(cardIds);
+	}, [cardData]);
+
+	function shuffleCards(cardId) {
+		const shuffled = cardId
+			.map(value => ({ value, sort: Math.random() }))
+			.sort((a, b) => a.sort - b.sort)
+			.map(({ value }) => value);
+
+		return shuffled;
+	} */

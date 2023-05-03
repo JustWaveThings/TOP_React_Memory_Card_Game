@@ -1,52 +1,69 @@
+import { nanoid } from 'nanoid';
+
 // https://www.agriculture.pa.gov/Plants_Land_Water/PlantIndustry/NIPPP/Pages/Controlled-Plant-Noxious-Weed.aspx
 const cardData = [
 	{
+		id: nanoid(),
 		img: 'Giant_hogweed.JPG',
 		name: 'Giant Hogweed',
 		latinName: 'Heracleum mantegazzianum',
 		link: 'Active Field Program',
+		clicked: false,
 	},
 	{
+		id: nanoid(),
 		img: 'goatsrue.jpg',
 		name: 'Goatsrue',
 		latinName: 'Galega officinalis',
 		link: 'Active Field Program',
+		clicked: false,
 	},
 	{
+		id: nanoid(),
 		img: 'kudzu.jpg',
 		name: 'Kudzu',
 		latinName: 'Pueraria lobata',
 		link: '',
+		clicked: false,
 	},
 	{
+		id: nanoid(),
 		img: 'palmer_amaranth.jpg',
 		name: 'Palmer amaranth',
 		latinName: 'Amaranthus palmeri',
 		link: '',
+		clicked: false,
 	},
 	{
+		id: nanoid(),
 		img: 'waterhemp.jpg',
 		name: 'Waterhemp',
 		latinName: 'Amaranthus rudis',
 		link: '',
+		clicked: false,
 	},
 	{
+		id: nanoid(),
 		img: 'tall_waterhemp.jpg',
 		name: 'Tall waterhemp',
 		latinName: 'Amaranthus tuberculatus',
 		link: '',
 	},
 	{
+		id: nanoid(),
 		img: 'animated_oat.jpg',
 		name: 'Animated oat',
 		latinName: 'Avena sterilis',
 		link: '',
+		clicked: false,
 	},
 	{
+		id: nanoid(),
 		img: 'dodder.jpg',
 		name: 'Dodder',
 		latinName: 'Cuscuta spp.',
 		link: 'Except for native species',
+		clicked: false,
 	},
 	/* {
 		img: '',

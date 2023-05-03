@@ -53,6 +53,7 @@
 	width: 150px;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	gap: 0.5rem;
 }
 
@@ -128,7 +129,6 @@
 	flex-direction: column;
 	gap: 1.5rem;
 	padding: 4rem;
-	display: none;
 	background-color: hsl(137, 94%, 52%, 100%);
 	border-radius: 0.25rem;
 }
@@ -147,7 +147,7 @@
 
 .new_game_button {
 	background-color: hsla(109, 94%, 52%, 50%);
-	border: none;
+
 	padding: 0.5rem 1rem;
 	border-radius: 0.25rem;
 	color: navy;

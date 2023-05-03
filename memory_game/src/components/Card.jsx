@@ -1,11 +1,10 @@
 import React from 'react';
 
 function Card(props) {
-	console.log(props.item.img);
 	return (
 		<div
 			className="card_container"
-			onClick={props.chosen}
+			onClick={() => props.chosen(props.item.id)}
 		>
 			<div className="card_top">
 				<img
@@ -17,9 +16,6 @@ function Card(props) {
 			<div className="card_bottom">
 				<div className="item_name">{props.item.name}</div>
 				<div className="latin_name"> {props.item.latinName}</div>
-				{/* <div className="link">
-					<a href="#" /> more info
-				</div> */}
 			</div>
 		</div>
 	);
