@@ -1,6 +1,6 @@
 {
-  "name": "memory_game",
-  "private": true,
+  "name": "TOP_React_Memory_Card_Game",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
