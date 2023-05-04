@@ -60,6 +60,7 @@
 .score > div {
 	align-self: center;
 	text-transform: capitalize;
+	font-size: 2rem;
 }
 
 .main {
@@ -73,7 +74,7 @@
 
 .card_container {
 	background-color: rgba(255, 0, 0, 0.125);
-	max-width: 150px;
+
 	border-bottom-left-radius: 0.25rem;
 	border-bottom-right-radius: 0.25rem;
 }
@@ -83,11 +84,12 @@
 }
 
 .card_top {
-	height: 150px;
-	width: 150px;
+	height: 300px;
+	width: 300px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	z-index: -5;
 }
 
 .card_bottom {
@@ -98,6 +100,7 @@
 	padding: 0.25rem;
 	justify-content: center;
 	align-items: center;
+	z-index: 1;
 }
 .item_name,
 .latin_name {

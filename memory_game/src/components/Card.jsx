@@ -9,8 +9,8 @@ function Card(props) {
 			<div className="card_top">
 				<img
 					src={props.item.img}
-					height="150"
-					width="150"
+					height="300"
+					width="300"
 				/>
 			</div>
 			<div className="card_bottom">

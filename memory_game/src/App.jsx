@@ -64,7 +64,18 @@ function App() {
 		const countOftrue = clickedArr.filter(Boolean).length;
 		setWrongClick(oldTrueCount > countOftrue);
 	}, [newTrueCount]);
-	const cardDisplay = cardData.map(item => {
+
+	function shuffleCards(cardData) {
+		const shuffled = cardData
+			.map(value => ({ value, sort: Math.random() }))
+			.sort((a, b) => a.sort - b.sort)
+			.map(({ value }) => value);
+		return shuffled;
+	}
+
+	const shuffleCardData = shuffleCards(cardData);
+
+	const cardDisplay = shuffleCardData.map(item => {
 		return (
 			<Card
 				key={item.id}
