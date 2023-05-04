@@ -48,6 +48,7 @@ const cardData = [
 		name: 'Tall waterhemp',
 		latinName: 'Amaranthus tuberculatus',
 		link: '',
+		clicked: false,
 	},
 	{
 		id: nanoid(),
